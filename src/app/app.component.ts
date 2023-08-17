@@ -2,11 +2,10 @@ import { Component } from '@angular/core';
 import appData from './data/base-data.json';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-
-  title = appData.appName;
+export class App {
+  appData = appData;
 }
