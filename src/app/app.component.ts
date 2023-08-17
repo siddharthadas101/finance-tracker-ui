@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-// import appData from './data/base-data.json';
+import appData from './data/base-data.json';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Financinator';
+
+  title = appData.appName;
 }
