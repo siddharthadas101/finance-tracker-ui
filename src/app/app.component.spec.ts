@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'financinator-ui'`, () => {
+  it(`should have as title 'finance-tracker-ui'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('financinator-ui');
+    expect(app.title).toEqual('finance-tracker-ui');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('financinator-ui app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('finance-tracker-ui app is running!');
   });
 });
