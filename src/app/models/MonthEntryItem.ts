@@ -1,6 +1,4 @@
-import { ItemConstants } from "../constants/ItemConstants";
-
-export class Item {
+export default class MonthEntryItem {
 	subject: string;
 	amount: number;
 	transferredTo: string;
@@ -9,8 +7,12 @@ export class Item {
 	transactionCategory: string;
 	userComment: string;
 
-	constructor(subject:string, amount: number, transferredTo:string, 
-		transactionType:number, transactionCategory:string, userComment:string){
+	constructor(subject:string, 
+		amount: number, 
+		transferredTo:string, 
+		transactionType:number, 
+		transactionCategory:string, 
+		userComment:string){
 		this.subject = subject;
 		this.amount = amount;
 		this.transferredTo = transferredTo;

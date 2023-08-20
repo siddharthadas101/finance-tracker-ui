@@ -1,0 +1,24 @@
+{
+	"data" : [
+		{
+			"month": 1,
+			"year": 2023,
+			"beforeSalaryCredit": 1000,
+			"salaryCreditAmount": 1000,
+			"totalInSalaryAccountAfterCredit": 2000,
+			"projectedAfterExpenditures": 1500,
+			"totalCreditCardBillAmount": 500,
+			"items": [
+				{
+					"subject": "ICICI Credit Card Bill",
+					"amount": 500,
+					"transferredTo": "ICICI",
+					"transactionDone": false,
+					"transactionType": -1,
+					"transactionCategory": "TRANSACTION_CREDIT_CARD_BILL",
+					"userComment": null
+				}
+			]
+		}
+	]
+}
