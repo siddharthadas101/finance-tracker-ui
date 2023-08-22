@@ -1,0 +1,13 @@
+{
+	"grid":{
+		"columns":{
+			"month": "Month",
+			"year": "Year",
+			"beforeSalaryCredit": "Saving Before Salary Credited",
+			"salaryCreditAmount": "Salary Received",
+			"totalInSalaryAccountAfterCredit": "Amount after Salary Credit",
+			"projectedAfterExpenditures": "Projected Savings (After Expenditures)",
+			"totalCreditCardBillAmount": "Total Credit Card Bill Amount"
+		}
+	}
+}

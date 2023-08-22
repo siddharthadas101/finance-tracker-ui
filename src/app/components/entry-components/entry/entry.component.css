@@ -1,0 +1,9 @@
+form{
+	/* display: flexbox; */
+	/* align-content: normal; */
+	display: block;
+	flex-wrap: nowrap;
+	border: 3px solid black;
+	height: 20rem;
+	width: 30rem;
+}
