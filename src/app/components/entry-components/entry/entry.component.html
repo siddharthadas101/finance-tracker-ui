@@ -8,10 +8,6 @@
       </select>
 
       <label for = "year">Year: </label>
-      <!-- <input type = "number" id = "year" name="year"
-        [(ngModel)] = "year"
-        required
-      /> -->
       <select name="year" id="year" [(ngModel)] = "year" required>
         <option *ngFor="let y of yearRange" value={{y}}>{{y}}</option>
       </select>
