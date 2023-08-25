@@ -25,7 +25,6 @@ export class EntryComponent {
   constructor(){
     this.generateMonthRange();
     this.generateYearRange();
-    // this.totalInSalaryAccountAfterCredit = this.beforeSalaryCredit + this.salaryCreditAmount;
   }
 
   saveDetails(){
@@ -41,5 +40,9 @@ export class EntryComponent {
     for(let i = 0; i<12; i++){
       this.months.push({displayText: this.monthNames[i], value: i+1})
     }
+  }
+
+  updateTotalInSalaryAccountAfterCredit(){
+    this.totalInSalaryAccountAfterCredit = this.beforeSalaryCredit + this.salaryCreditAmount;
   }
 }

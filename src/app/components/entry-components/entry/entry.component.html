@@ -1,36 +1,71 @@
-<div>
-  <h1>Add A Monthly Entry</h1>
-  <form class="entry-form" (ngSubmit)="saveDetails()">
-    <div>
-      <label for = "month">Month: </label>
-      <select name="month" id="month" [(ngModel)] = "month" required>
-        <option *ngFor="let item of months" value={{item.value}}>{{item.displayText}}</option>
-      </select>
+<div class="entry-form">
+  <h2>Add A Monthly Entry</h2>
+  <form (ngSubmit)="saveDetails()">
+    <div class="form-details-box">
+      <div class="form-details-editable">
+        <div class="entry-time">
+          <div class="entry-field">
+            <label for = "month">Month</label><br>
+            <select name="month" id="month" [(ngModel)] = "month" required>
+              <option *ngFor="let item of months" value={{item.value}}>{{item.displayText}}</option>
+            </select>
+          </div>
+          <div class="entry-field">
+            <label for = "year">Year</label><br>
+            <select name="year" id="year" [(ngModel)] = "year" required>
+              <option *ngFor="let y of yearRange" value={{y}}>{{y}}</option>
+            </select>
+          </div>
+        </div>
+        <div class="entry-amts">
+          <div class="entry-field">
+            <label for = "beforeSalaryCredit">A/c Balance</label><br>
+            <input type = "number" id = "beforeSalaryCredit" name="beforeSalaryCredit"
+              [(ngModel)] = "beforeSalaryCredit"
+              (ngModelChange)="updateTotalInSalaryAccountAfterCredit()"
+              required
+            />
+          </div>
+          <div class="entry-field">
+            <label for = "salaryCreditAmount">Salary Received</label><br>
+            <input type = "number" id = "salaryCreditAmount" name="salaryCreditAmount"
+              [(ngModel)] = "salaryCreditAmount"
+              (ngModelChange)="updateTotalInSalaryAccountAfterCredit()"
+              required
+            />
+          </div>
+        </div>
+      </div>
+  
+      <table class="form-details-noneditable">
+        <th>Balance after Salary Credit</th>
+        <th>Total Credit Card Bill</th>
+        <th>Amount Left After Expenditures</th>
+        <tr>
+          <td>{{totalInSalaryAccountAfterCredit}}</td>
+          <td>{{totalCreditCardBillAmount}}</td>
+          <td>{{projectedAfterExpenditures}}</td>
+        </tr>
+      </table>
+    </div>
 
-      <label for = "year">Year: </label>
-      <select name="year" id="year" [(ngModel)] = "year" required>
-        <option *ngFor="let y of yearRange" value={{y}}>{{y}}</option>
-      </select>
-    </div>
-    <div>
-      <label for = "beforeSalaryCredit">Acc Balance Before Salary Credit: </label>
-      <input type = "number" id = "beforeSalaryCredit" name="beforeSalaryCredit"
-        [(ngModel)] = "beforeSalaryCredit"
-        required
-      />
-    </div>
-    <div>
-      <label for = "salaryCreditAmount">Salary Received: </label>
-      <input type = "number" id = "salaryCreditAmount" name="salaryCreditAmount"
-        [(ngModel)] = "salaryCreditAmount"
-        required
-      />
+    <div class="item-buttons">
+      <add-item-btn
+        title="Add Expense Item"
+        bgColour="#4CAF50"
+      ></add-item-btn>
+      <add-item-btn
+        title="Do Something"
+        bgColour="#F44336"
+      ></add-item-btn>
     </div>
 
-    <div>
-      <span>Balance after Salary Credit: {{totalInSalaryAccountAfterCredit}}</span>
+    <div class="tasks-list">
+
     </div>
 
-    <input type="submit" value="Save" class="generic-btn"/>
+    <div class="form-buttons">
+      <input type="submit" value="Save" class="generic-btn"/>
+    </div>
   </form>
 </div>
