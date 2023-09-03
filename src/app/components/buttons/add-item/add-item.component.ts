@@ -15,6 +15,5 @@ export class AddItemComponent {
 
   onClick(){
     this.btnClick.emit();
-    console.log('Button Clicked: ',this.title);
   }
 }

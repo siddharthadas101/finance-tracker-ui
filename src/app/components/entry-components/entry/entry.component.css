@@ -60,8 +60,11 @@ th{
 }
 
 .tasks-list{
-	/* border: 1px black solid; */
-	height: 14rem
+	border: 1px black solid;
+	padding-left: 1rem;
+	height: 14rem;
+	overflow-y: auto;
+	overflow-x: hidden;
 }
 
 .form-buttons{

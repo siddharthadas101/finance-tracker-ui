@@ -53,6 +53,7 @@
       <add-item-btn
         title="Add Expense Item"
         bgColour="#4CAF50"
+        (btnClick)="appendEntryItem()"
       ></add-item-btn>
       <add-item-btn
         title="Do Something"
@@ -61,7 +62,7 @@
     </div>
 
     <div class="tasks-list">
-
+      <entry-item *ngFor="let expItm of expenseItems"></entry-item>
     </div>
 
     <div class="form-buttons">

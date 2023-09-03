@@ -1,4 +1,5 @@
 import { Component, Input, Output } from '@angular/core';
+import { EntryItemComponent } from '../entry-item/entry-item.component';
 
 @Component({
   selector: 'entry-form',
@@ -15,6 +16,8 @@ export class EntryComponent {
 	totalInSalaryAccountAfterCredit:number = 0;
 	projectedAfterExpenditures:number = 0;
 	totalCreditCardBillAmount:number = 0;
+
+  expenseItems:EntryItemComponent[] = [];
 
   currentYear:number = new Date().getFullYear();
   yearRange:number[] = [];
@@ -44,5 +47,11 @@ export class EntryComponent {
 
   updateTotalInSalaryAccountAfterCredit(){
     this.totalInSalaryAccountAfterCredit = this.beforeSalaryCredit + this.salaryCreditAmount;
+  }
+
+  appendEntryItem(){
+    let expenseItem:EntryItemComponent = new EntryItemComponent();
+    this.expenseItems.push(expenseItem);
+    console.log(this.expenseItems);
   }
 }
